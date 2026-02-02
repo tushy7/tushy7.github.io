@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Surprise</title>
+  </head>
+
+  <body style="
+    margin: 0;
+    height: 100vh;
+    background-color: #ffccd5;
+    color: #ff5678;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Comic Sans MS', sans-serif;
+  ">
+    <div>
+
+<!-- Slide One -->
+    
+      <div>   
+        <div id="screen1">
+          <p> Hello Micaela...</p>
+          <button id="myButton" style = "width:500px; height:500px; border: 3px solid black; padding: 0;"> 
+            <img src="cat1.gif" style="width:100%; height:100%; display: block;">
+          </button>          
+        </div>
+
+
+        <div id="screen2" style="display: none;">
+          <p>Thank You So Much For Everything This Past Year</p>
+          <button id="myButton2" style = "width:500px; height:500px; border: 3px solid black; padding: 0;"> 
+            <img src="cat4.gif" style="width:100%; height:100%; display: block;">
+            </button>
+        </div>
+
+        <div id="screen3" style="display: none;">
+          <p>I Wanted To Make Something To Show My Appreciation</p>
+          <button id="myButton3" style = "width:500px; height:500px; border: 3px solid black; padding: 0;"> 
+            <img src="cat8.gif" style="width:100%; height:100%; display: block;">
+          </button>
+        </div>
+  
+        <div id="screen4" style="display: none;">
+          <p>Will You Be My Valentine?</p>
+          <button id="myButton4" style = "width:500px; height:500px;"> Yes </button>
+          <button id="myButton5"> No... </button>
+        </div>
+      </div>
+
+
+      </div>
+
+      <script> 
+      let clickNum = 0
+
+
+      function ifClicked() 
+      {
+        clickNum++;
+
+        document.getElementById('screen1').style.display = 'none';
+        document.getElementById('screen2').style.display = 'none';
+        document.getElementById('screen3').style.display = 'none';
+        document.getElementById('screen4').style.display = 'none';
+      
+        if (clickNum === 1) {
+          document.getElementById('screen2').style.display = 'block';
+        } else if (clickNum === 2) {
+          document.getElementById('screen3').style.display = 'block';
+        } else if (clickNum === 3) {
+          document.getElementById('screen4').style.display = 'block';
+        }
+
+      }
+      document.getElementById('myButton').addEventListener('click', ifClicked);
+      document.getElementById('myButton2').addEventListener('click', ifClicked);
+      document.getElementById('myButton3').addEventListener('click', ifClicked);    
+      
+      </script>
+
+  </body>
+</html>
